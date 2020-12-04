@@ -3,23 +3,18 @@
 */
 
 const factorial = (numero)=>{
-    /* var result = 1;
-    for (let i = 1 ; i <= numero; i++) {
-        result = i*result;
-        console.log(result);
-    }
-    console.log('result'); */
-
-    var contador = 0;
     var resultado = 1;
-    while( contador < numero){
-        ++contador;
-        resultado *= contador; 
-        console.log(resultado);
+    if(numero === 0){
+        return resultado;
+    }else{
+        for (let i = 1 ; i <= numero; i++) {
+            resultado *= i;
+        }
+        return resultado;
     }
 };
 
-
-factorial(8);
-factorial(7);
-factorial(5);
+console.log(factorial(0));
+console.log(factorial(1));
+console.log(factorial(2));
+console.log(factorial(3));
